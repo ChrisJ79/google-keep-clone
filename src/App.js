@@ -11,17 +11,13 @@ import './App.css';
 const App = () => (
   <div className="App">
     <Header />
-    {Notes.map(
-      function createNotes(noteItem) {
-        return (
+    {Notes.map(noteItem => (
         <Note
           key={noteItem.id}
           title={noteItem.title}
           content={noteItem.content}
         />
-        )
-      } 
-    )}
+    ))}
     <Footer />
   </div>
 )
