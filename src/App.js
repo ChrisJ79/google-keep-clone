@@ -4,14 +4,15 @@ import Note from './Components/Note/Note';
 import Footer from './Components/Footer/Footer';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <Note />
-      <Footer />
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <Header />
+    <Note 
+      title="Note Title"
+      content="Note Content"
+    />
+    <Footer />
+  </div>
+)
 
 export default App;
