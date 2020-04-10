@@ -7,19 +7,24 @@ import Notes from './notes';
 import './App.css';
 
 
-const App = () => (
-  <div className="App">
-    <Header />
-    <CreateArea />
-    {Notes.map(noteItem => (
-        <Note
-          key={noteItem.id}
-          title={noteItem.title}
-          content={noteItem.content}
-        />
-    ))}
-    <Footer />
-  </div>
-)
+function App() {
+  function addNote(note) {
+    console.log(note);
+  }
+  return (
+    <div className="App">
+      <Header />
+      <CreateArea onAdd={addNote}/>
+      {Notes.map((noteItem, index) => (
+          <Note
+            key={index}
+            id={index}
+            title={noteItem.title}
+            content={noteItem.content}
+          />
+      ))}
+      <Footer />
+    </div>
+  )}
 
 export default App;
