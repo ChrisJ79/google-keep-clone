@@ -6,8 +6,6 @@ import Notes from './notes';
 import './App.css';
 
 
-
-
 const App = () => (
   <div className="App">
     <Header />
