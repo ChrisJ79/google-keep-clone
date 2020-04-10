@@ -4,7 +4,7 @@ import '../../App.css';
 function Note(props) {
 
     function handleClick() {
-        
+        props.onDelete(props.id);
     }
 
     return (
